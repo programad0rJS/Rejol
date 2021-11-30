@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1>Rejol Digital</h1>
+
+        <div class="Rejol">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const GetHora = () => {
+            const Fecha = new Date();
+            const Tiempo = {
+                Hora: Fecha.getHours(),
+                Minutos: Fecha.getMinutes(),
+                Segundo: Fecha.getSeconds()
+            }
+            const Ahora = `${Tiempo.Hora} : ${Tiempo.Minutos} : ${Tiempo.Segundo}`;
+
+            document.querySelector('.Rejol').innerHTML = Ahora;
+
+
+            setInterval(GetHora, 300);
+        }
+        GetHora();
+    </script>
+</body>
+
+</html>
